@@ -387,10 +387,6 @@ void Dijkstra(BasicGraph& G, Vertex* s)
             std::cout << " " << u->name << " --- " << v->name << std::endl;
         }
     }
-
-    for (auto& it : S) {
-        std::cout << it->name << "---->";
-    }
 }
 
 void testDIJKSTRA(BasicGraph& G)
