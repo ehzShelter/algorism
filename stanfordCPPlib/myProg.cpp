@@ -383,6 +383,8 @@ void Dijkstra(BasicGraph& G, Vertex* s)
         std::cout << "cost: " << u->cost << " name: " << u->name << std::endl;
         for (Vertex* v : G.getNeighbors(u)) {
             relax(G, u, v);
+
+            std::cout << " " << u->name << " --- " << v->name << std::endl;
         }
     }
 
