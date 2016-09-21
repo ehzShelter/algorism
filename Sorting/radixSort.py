@@ -8,6 +8,7 @@ def maxF(L):
 
 # Your unordered list
 a = [1546, 89, 989, 1131, 289, 565, 10, 2]
+
 # pushing data to dictionary
 # {0: '1546', 1: '89', 2: '989', 3: '1131', 4: '289', 5: '565', 6: '10', 7: '2'}
 L = {i: str(a[i]) for i in range(len(a))}
@@ -19,10 +20,7 @@ for k, v in L.items():
 
 # python range(start, stop, step)
 for x in range(m - 1, -1, -1):  # Iterating through all the digits
-    bucket = {}
-    for key in range(10):
-        bucket.setdefault(key, [])
-
+    bucket = {key:[] for key in range(10)}
     for k, v in L.items():
         key = int(v[x])
         bucket[key].append(v)  # Appending values in bucket using key as their digit
@@ -34,7 +32,6 @@ for x in range(m - 1, -1, -1):  # Iterating through all the digits
             i += 1
 
 # print(bucket)
-
 # printing sorted list
 
 V = []
