@@ -18,24 +18,30 @@ for k, v in L.items():
     L[k] = v
 
 # python range(start, stop, step)
-for x in range(m - 1, -1, -1):  #iterating through all the digits
+for x in range(m - 1, -1, -1):  # Iterating through all the digits
     bucket = {}
     for key in range(10):
         bucket.setdefault(key, [])
 
     for k, v in L.items():
         key = int(v[x])
-        bucket[key].append(v)  #appending values in bucket using key as their digit
+        bucket[key].append(v)  # Appending values in bucket using key as their digit
 
     i = 0
     for k, v in bucket.items():
         for e in v:
-            L[i] = e  #getting values back to list from bucket
+            L[i] = e  # Getting values back to list from bucket
             i += 1
 
 # print(bucket)
 
 # printing sorted list
+
+V = []
 print("Sorted list: ", " ", end="")
 for k, v in L.items():
-    print(str(v) + " ", end="")
+    # print(str(v) + " ", end="")
+    V.append(str(v))
+
+
+print(list((map(lambda x : int(x), V))))
